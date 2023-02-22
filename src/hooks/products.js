@@ -11,6 +11,7 @@ export const useProducts = () => {
       setProducts(data)
       setFetched(true)
     }
+    !fetched && getData()
   } ,[]);
 
   return [products, fetched];
