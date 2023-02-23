@@ -22,9 +22,12 @@ export const ProductsProvider = props => {
     setProducts(filteredItems)
   }
 
+  /* eslint-disable */
   useEffect(() => {fetched && setProducts([...fetchedProducts])}, [fetched])
 
   useEffect(() => {searchStr.length !== 0 ? search() : setProducts([...fetchedProducts])}, [searchStr])
+
+  /* eslint-enable */
 
   const contextProps = {
     productDetail, setProductDetail,
