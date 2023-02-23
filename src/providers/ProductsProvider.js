@@ -1,12 +1,13 @@
-import { useState, createContext } from 'react'
+import { createContext } from 'react'
+import { useProducts } from '../hooks/products';
 
 export const ProductsContext = createContext();
 
 export const ProductsProvider = props => {
-  const [products, setProducts] = useState();
+  const [products, fetched] = useProducts();
 
   return (
-    <ProductsContext.Provider value={{ products, setProducts }} >
+    <ProductsContext.Provider value={{ products, fetched }} >
       { props.children }
     </ProductsContext.Provider>
   )

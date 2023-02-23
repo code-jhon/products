@@ -1,15 +1,13 @@
 // Retrieve data function
-const retrieveData = (url) => {
-  const data = fetch(url)
-  .then(response => response.json())
-  .then(data => data)
-
-  return data;
+const retrieveData = async (url) => {
+  return fetch('https://dummyjson.com/products')
+  .then(resp => resp.json())
+  .then(data => data.products)
 }
 
 // Get products data from fakeapi
 const getProducts = () => {
-  return retrieveData(`${process.env.API}/products`)
+  return retrieveData(process.env.API)
 }
 
 // encapsulated methods
