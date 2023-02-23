@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { ProductsContext } from '../providers/ProductsProvider'
 import ProductCard from './ProductCard'
+import Loading from './Loading';
 import { styled } from '@mui/material/styles';
 
 const ContentList = styled('div')(({ theme }) => ({
@@ -30,7 +31,7 @@ function ProductList() {
     )
   )
 
-  const content = fetched ? (<>{productList}</>) : ("There's no items to show");
+  const content = fetched ? (<>{productList}</>) : <Loading />;
   return (
     <ContentList>{ content }</ContentList>
   )
