@@ -31,7 +31,7 @@ export default function ProductCard({ product }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={handleOpen}>Learn More</Button>
+        <Button size="small" onClick={handleOpen}>See More</Button>
       </CardActions>
     </Card>
   );
