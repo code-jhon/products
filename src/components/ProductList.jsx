@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { ProductsContext } from '../providers/ProductsProvider'
 import ProductCard from './ProductCard'
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const ContentList = styled('div')(({ theme }) => ({
   display: 'flex',

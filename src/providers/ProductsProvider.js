@@ -5,10 +5,17 @@ export const ProductsContext = createContext();
 
 export const ProductsProvider = props => {
   const [products, fetched] = useProducts()
-  const [isModalEnabled, setIsModalEnabled] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [productDetail, setProductDetail] = useState({})
+
+  const contextProps = {
+    productDetail, setProductDetail,
+    isModalOpen, setIsModalOpen,
+    products, fetched
+  }
 
   return (
-    <ProductsContext.Provider value={{ products, fetched, isModalEnabled, setIsModalEnabled }} >
+    <ProductsContext.Provider value={{ ...contextProps }} >
       { props.children }
     </ProductsContext.Provider>
   )
