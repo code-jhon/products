@@ -21,7 +21,7 @@ You may also see any lint errors in the console.
 # Netlify
 
 You can find this app on netlify.
-open [https://frabjous-medovik-e2e9ec.netlify.app/](https://frabjous-medovik-e2e9ec.netlify.app/)
+open [https://intstoreapp.netlify.app/](https://intstoreapp.netlify.app/)
 
 ## Acceptance Criteria
 * The application should display a list of products. (done)
